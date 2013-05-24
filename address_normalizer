@@ -1,0 +1,8 @@
+require 'geocoder'
+
+def address_normalize
+puts "Enter your address"
+address = gets.chomp
+n_address = Geocoder.search "#{address}"
+return n_address[0].formatted_address
+end 
